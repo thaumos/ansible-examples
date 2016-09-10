@@ -4,15 +4,17 @@
 - name: Download from Jenkins
   get_url:
     url: "{{ jenkins_url }}"
+    url_username: admin
+    url_password: {{ secret-password }}
     dest: /tmp/gameoflife.war
 
 - name: Deploy HelloWorld to JBoss
-  jboss: 
-    deploy_path: /usr/share/jboss-as/standalone/deployments/ 
-    src: /tmp/gameoflife.war 
-    deployment: gameoflife.war 
+  jboss:
+    deploy_path: /usr/share/jboss-as/standalone/deployments/
+    src: /tmp/gameoflife.war
+    deployment: gameoflife.war
     state: present
-  
+
 # - name: Copy application WAR file to host
 #   copy: src=ticket-monster.war dest=/tmp
 
