@@ -13,3 +13,8 @@
     src: /tmp/gameoflife.war
     deployment: gameoflife.war
     state: present
+
+- name: Remove tmp deploy
+  file:
+    dest: /tmp/gameoflife.ware
+    state: absent
