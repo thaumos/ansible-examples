@@ -4,6 +4,7 @@
 - name: Download from Jenkins
   get_url:
     url: "{{ jenkins_url }}"
+    force_basic_auth: yes
     url_username: admin
     url_password: "{{ secretpassword }}"
     dest: /tmp/gameoflife.war
