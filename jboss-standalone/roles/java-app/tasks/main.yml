@@ -9,7 +9,7 @@
     url_password: "{{ secretpassword }}"
     dest: /tmp/gameoflife.war
 
-- name: Deploy HelloWorld to JBoss
+- name: Deploy The Game of Life
   jboss:
     deploy_path: /usr/share/jboss-as/standalone/deployments/
     src: /tmp/gameoflife.war
