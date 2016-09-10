@@ -5,7 +5,7 @@
   get_url:
     url: "{{ jenkins_url }}"
     url_username: admin
-    url_password: "{{ secret-password }}"
+    url_password: "{{ secretpassword }}"
     dest: /tmp/gameoflife.war
 
 - name: Deploy HelloWorld to JBoss
