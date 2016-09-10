@@ -16,5 +16,5 @@
 
 - name: Remove tmp deploy
   file:
-    dest: /tmp/gameoflife.ware
+    dest: /tmp/gameoflife.war
     state: absent
