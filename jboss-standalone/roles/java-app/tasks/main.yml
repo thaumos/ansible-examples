@@ -1,11 +1,11 @@
 ---
-- name: Download from Jenkins
-  get_url:
-    url: "{{ jenkins_url }}"
-    force_basic_auth: yes
-    url_username: admin
-    url_password: "{{ secretpassword }}"
+- name: Download from S3
+  s3:
+    bucket: cjptower
+    object: gameoflife.war
     dest: /tmp/gameoflife.war
+    mode: get
+
 
 - name: Deploy The Game of Life
   jboss:
