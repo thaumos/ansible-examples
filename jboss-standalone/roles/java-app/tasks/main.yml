@@ -1,4 +1,9 @@
 ---
+- name: ensure boto is installed
+  yum:
+    pkg: python-boto
+    state: present
+
 - name: Download from S3
   s3:
     bucket: cjptower
